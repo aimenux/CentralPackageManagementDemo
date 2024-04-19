@@ -7,10 +7,9 @@
     <IsPackable>!$(IsTestProject)</IsPackable>
     <AssemblyName>$(RootNamespace)</AssemblyName>
     <RootNamespace>CentralPackageManagementDemo.$(MSBuildProjectName)</RootNamespace>
-    <OpenApiDocumentsDirectory>$(SolutionDir)\oas</OpenApiDocumentsDirectory>
-    <OpenApiGenerateDocuments>$(IsApiProject)</OpenApiGenerateDocuments>
-    <OpenApiGenerateDocumentsOnBuild>$(IsApiProject)</OpenApiGenerateDocumentsOnBuild>
-    <IsApiProject>$(MSBuildProjectName.EndsWith('Api'))</IsApiProject>
+    <OpenApiDocumentsDirectory>$(SolutionDir)\after\oas</OpenApiDocumentsDirectory>
+    <OpenApiGenerateDocuments>true</OpenApiGenerateDocuments>
+    <OpenApiGenerateDocumentsOnBuild>true</OpenApiGenerateDocumentsOnBuild>
     <IsTestProject>$(MSBuildProjectName.EndsWith('Tests'))</IsTestProject>
     <RunCodeAnalysis>true</RunCodeAnalysis>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>

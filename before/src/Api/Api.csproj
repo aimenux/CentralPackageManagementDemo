@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <OpenApiDocumentsDirectory>$(SolutionDir)\oas</OpenApiDocumentsDirectory>
+    <OpenApiDocumentsDirectory>$(SolutionDir)\before\oas</OpenApiDocumentsDirectory>
     <OpenApiGenerateDocuments>true</OpenApiGenerateDocuments>
     <OpenApiGenerateDocumentsOnBuild>true</OpenApiGenerateDocumentsOnBuild>
   </PropertyGroup>
