@@ -21,7 +21,7 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore before-solution
-      run: dotnet restore .\before\CentralPackageManagementDemo.Before.sln
+      run: dotnet restore ./before/CentralPackageManagementDemo.Before.sln
     - name: Build before-solution
       run: dotnet build --no-restore .\before\CentralPackageManagementDemo.Before.sln
     - name: Test before-solution
