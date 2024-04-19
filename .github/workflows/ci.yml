@@ -21,14 +21,14 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore before-solution
-      run: dotnet restore ./before/CentralPackageManagementDemo.Before.sln
+      run: dotnet restore CentralPackageManagementDemo.Before.sln
     - name: Build before-solution
-      run: dotnet build --no-restore .\before\CentralPackageManagementDemo.Before.sln
+      run: dotnet build --no-restore CentralPackageManagementDemo.Before.sln
     - name: Test before-solution
-      run: dotnet test --no-build --verbosity normal .\before\CentralPackageManagementDemo.Before.sln
+      run: dotnet test --no-build --verbosity normal CentralPackageManagementDemo.Before.sln
     - name: Restore after-solution
-      run: dotnet restore .\after\CentralPackageManagementDemo.After.sln
+      run: dotnet restore CentralPackageManagementDemo.After.sln
     - name: Build after-solution
-      run: dotnet build --no-restore .\after\CentralPackageManagementDemo.After.sln
+      run: dotnet build --no-restore CentralPackageManagementDemo.After.sln
     - name: Test after-solution
-      run: dotnet test --no-build --verbosity normal .\after\CentralPackageManagementDemo.After.sln
+      run: dotnet test --no-build --verbosity normal CentralPackageManagementDemo.After.sln

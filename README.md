@@ -1,2 +1,2 @@
 # CentralPackageManagementDemo
-Enabling central package managment in web api projects
+Enabling central package management in web api projects
