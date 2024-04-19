@@ -20,15 +20,15 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-    - name: Restore [before]
+    - name: Restore before-solution
       run: dotnet restore .\before\CentralPackageManagementDemo.Before.sln
-    - name: Build [before]
+    - name: Build before-solution
       run: dotnet build --no-restore .\before\CentralPackageManagementDemo.Before.sln
-    - name: Test [before]
+    - name: Test before-solution
       run: dotnet test --no-build --verbosity normal .\before\CentralPackageManagementDemo.Before.sln
-    - name: Restore [after]
+    - name: Restore after-solution
       run: dotnet restore .\after\CentralPackageManagementDemo.After.sln
-    - name: Build [after]
+    - name: Build after-solution
       run: dotnet build --no-restore .\after\CentralPackageManagementDemo.After.sln
-    - name: Test [after]
+    - name: Test after-solution
       run: dotnet test --no-build --verbosity normal .\after\CentralPackageManagementDemo.After.sln
