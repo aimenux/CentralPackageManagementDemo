@@ -1,0 +1,29 @@
+﻿<Project>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>!$(IsTestProject)</IsPackable>
+    <AssemblyName>$(RootNamespace)</AssemblyName>
+    <RootNamespace>CentralPackageManagementDemo.$(MSBuildProjectName)</RootNamespace>
+    <OpenApiDocumentsDirectory>$(SolutionDir)\oas</OpenApiDocumentsDirectory>
+    <OpenApiGenerateDocuments>$(IsApiProject)</OpenApiGenerateDocuments>
+    <OpenApiGenerateDocumentsOnBuild>$(IsApiProject)</OpenApiGenerateDocumentsOnBuild>
+    <IsApiProject>$(MSBuildProjectName.EndsWith('Api'))</IsApiProject>
+    <IsTestProject>$(MSBuildProjectName.EndsWith('Tests'))</IsTestProject>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <MSBuildTreatWarningsAsErrors>true</MSBuildTreatWarningsAsErrors>
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(IsTestProject)' == 'true'">
+    <Using Include="Xunit" />
+    <Using Include="AutoFixture" />
+    <Using Include="FluentAssertions" />
+  </ItemGroup>
+    
+</Project>
