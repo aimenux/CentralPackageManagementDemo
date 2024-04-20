@@ -19,7 +19,7 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(IsTestProject)' == 'true'">
+  <ItemGroup Label="Implicit usings" Condition="'$(IsTestProject)' == 'true'">
     <Using Include="Xunit" />
     <Using Include="AutoFixture" />
     <Using Include="FluentAssertions" />
